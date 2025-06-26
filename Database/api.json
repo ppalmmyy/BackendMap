@@ -1,0 +1,189 @@
+[
+  {
+    "name": "FROST Magical Ice of Siam",
+    "address": "75 6 ตำบล หนองปลาไหล อำเภอบางละมุง ชลบุรี 20150 ไทย",
+    "rating": 4,
+    "location": {
+      "lat": 12.9695625,
+      "lng": 100.9759375
+    },
+    "types": "Art and Culture",
+    "image": "/Photo/Frost.jpg"
+  },
+  {
+    "name": "เกาะลอย",
+    "address": "5WFC+J92 ตำบล ศรีราชา อำเภอศรีราชา ชลบุรี 20110 ไทย",
+    "rating": 4.5,
+    "location": {
+      "lat": 13.1740143,
+      "lng": 100.9208769
+    },
+    "types": "Park",
+    "image": "/Photo/Kohloy.jpg"
+  },
+  {
+    "name": "จุดชมวิว เขาแหลมฉบัง",
+    "address": "3VHF+6H2 อาคาร สมุทร เขต ตำบลทุ่งสุขลา อำเภอศรีราชา ชลบุรี 20230 ไทย",
+    "rating": 4.7,
+    "location": {
+      "lat": 13.0769261,
+      "lng": 100.8738061
+    },
+    "types": "Nature",
+    "image": "/Photo/Lamchabang.jpg"
+  },
+  {
+    "name": "หาดวอนนภา",
+    "address": "186 ถนน บางแสนล่าง ตำบลแสนสุข อำเภอเมืองชลบุรี ชลบุรี 20130 ไทย",
+    "rating": 4.4,
+    "location": {
+      "lat": 13.269572,
+      "lng": 100.9233621
+    },
+    "types": "Nature",
+    "image": "/Photo/Wonnapa.jpg"
+  },
+  {
+    "name": "อันเดอร์วอเตอร์ เวิลด์ พัทยา",
+    "address": "22 22 หมู่ 11 ถ. สุขุมวิท ตำบล หนองปรือ อำเภอบางละมุง ชลบุรี 20150 ไทย",
+    "rating": 3.9,
+    "location": {
+      "lat": 12.896693,
+      "lng": 100.896062
+    },
+    "types": "Museum",
+    "image": "/Photo/underwater.png"
+  },
+  {
+    "name": "แกรนด์แคนยอน ชลบุรี",
+    "address": "20000 ถ. เลี่ยงเมืองชลบุรี ตำบล ห้วยกะปิ อำเภอเมืองชลบุรี ชลบุรี 20000 ไทย",
+    "rating": 4.1,
+    "location": {
+      "lat": 13.3230553,
+      "lng": 100.9807451
+    },
+    "types": "Nature",
+    "image": "/Photo/Grand.jpg"
+  },
+  {
+    "name": "ชายหาดแหลมฉบัง",
+    "address": "3VJJ+2QP Unnamed Road อำเภอศรีราชา ชลบุรี 20230 ไทย",
+    "rating": 4.1,
+    "location": {
+      "lat": 13.080094,
+      "lng": 100.8819634
+    },
+    "types": "Nature",
+    "image": "/Photo/beach.jpg"
+  },
+  {
+    "name": "น้ำตกชันตาเถร",
+    "address": "62RW+V5H ตำบล บางพระ อำเภอศรีราชา ชลบุรี 20110 ไทย",
+    "rating": 4.1,
+    "location": {
+      "lat": 13.2421847,
+      "lng": 101.0454846
+    },
+    "types": "Nature",
+    "image": "/Photo/Waterfall.jpg"
+  },
+  {
+    "name": "ช่องเขาขาด",
+    "address": "5R72+85G ศรีราชา อำเภอ เกาะสีชัง ชลบุรี 20120 ไทย",
+    "rating": 4.5,
+    "location": {
+      "lat": 13.1633042,
+      "lng": 100.8004481
+    },
+    "types": "Nature",
+    "image": "/Photo/Mountain.jpg"
+  },
+  {
+    "name": "แหลมถ้ำพัง",
+    "address": "4RW2+WF5 ถนน เฉลิมพระเกียรติ ตำบล ท่าเทววงษ์ อำเภอ เกาะสีชัง ชลบุรี 20120 ไทย",
+    "rating": 4.6,
+    "location": {
+      "lat": 13.1472705,
+      "lng": 100.8012413
+    },
+    "types": "Nature",
+    "image": "/Photo/ThamPhang.jpg"
+  },
+  {
+    "name": "สวนนงนุชพฤกษศาสตร์",
+    "address": "34 ตำบล นาจอมเทียน อำเภอสัตหีบ ชลบุรี 20250 ไทย",
+    "rating": 4.6,
+    "location": {
+      "lat": 12.765497,
+      "lng": 100.9351314
+    },
+    "types": "Nature",
+    "image": "/Photo/Nongnuch.jpg"
+  },
+  {
+    "name": "สกายวอล์ค วัดเขาตะแบก",
+    "address": "4369+C8G Unnamed Road อำเภอศรีราชา ชลบุรี 20110 ไทย",
+    "rating": 4.5,
+    "location": {
+      "lat": 13.1110688,
+      "lng": 101.0683165
+    },
+    "types": "Temple",
+    "image": "/Photo/Skywalk.jpg"
+  },
+  {
+    "name": "จุดชมวิวกังหันลม",
+    "address": "WQ4G+V3C Unnamed Rd อำเภอบางละมุง ชลบุรี 20150 ไทย",
+    "rating": 4.7,
+    "location": {
+      "lat": 12.9071866,
+      "lng": 100.7751451
+    },
+    "types": "Nature",
+    "image": "/Photo/kanghanLom.jpg"
+  },
+  {
+    "name": "จุดชมวิว แหลมบาลีฮาย",
+    "address": "WVH6+MXR Unnamed Road เมืองพัทยา อำเภอบางละมุง ชลบุรี 20150 ไทย",
+    "rating": 4.5,
+    "location": {
+      "lat": 12.9292365,
+      "lng": 100.8623973
+    },
+    "types": "Nature",
+    "image": "/Photo/LamBalihi.jpg"
+  },
+  {
+    "name": "เมืองจำลอง",
+    "address": "387 ถ. สุขุมวิท เมืองพัทยา อำเภอบางละมุง ชลบุรี 20150 ไทย",
+    "rating": 4.2,
+    "location": {
+      "lat": 12.9551857,
+      "lng": 100.9088535
+    },
+    "types": "Art and Culture",
+    "image": "/Photo/city.jpg"
+  },
+  {
+    "name": "ปราสาทสัจธรรม",
+    "address": "206 2 ถ. พัทยา - นาเกลือ เมืองพัทยา อำเภอบางละมุง ชลบุรี 20150 ไทย",
+    "rating": 4.6,
+    "location": {
+      "lat": 12.9728707,
+      "lng": 100.8891322
+    },
+    "types": "Art and Culture",
+    "image": "/Photo/museam.jpg"
+  },
+  {
+    "name": "มณฑปรอยพระพุทธบาท",
+    "address": "5R94+J5P ตำบล ท่าเทววงษ์ อำเภอ เกาะสีชัง ชลบุรี 20120 ไทย",
+    "rating": 4.7,
+    "location": {
+      "lat": 13.1690922,
+      "lng": 100.8055182
+    },
+    "types": "Temple",
+    "image": "/Photo/temple.jpg"
+  }
+]
