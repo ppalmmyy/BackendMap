@@ -5,6 +5,8 @@ import Login from './login.js';
 import API from './api.js';
 import types from './showmap.js';
 import place from './place.js';
+import trip from './trip.js';
+
 
 
 const router = express.Router();
@@ -14,6 +16,8 @@ router.use('/login', Login);
 router.use('/test',API);
 router.use('/type',types);
 router.use('/place',place);
+router.use('/trip', trip);
+
 
 
 export default router;

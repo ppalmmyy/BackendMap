@@ -332,6 +332,115 @@ export const getPlaces = async () => {
   }
 };
 
+// ====== ทริป + จุดแวะ ======
+
+// สร้างทริปใหม่
+export const createTrip = async ({ user_id, name, startLat, startLng, endLat, endLng }) => {
+  const id_trip = uuidv4();
+
+  try {
+    const sql = `
+      INSERT INTO trip (id_trip, user_id, name, start_lat, start_lng, end_lat, end_lng)
+      VALUES (?, ?, ?, ?, ?, ?, ?)
+    `;
+    await DB.execute(sql, [
+      id_trip,
+      user_id,
+      name || null,
+      startLat ?? null,
+      startLng ?? null,
+      endLat ?? null,
+      endLng ?? null
+    ]);
+
+    return {
+      success: true,
+      trip: { id_trip, user_id, name, startLat, startLng, endLat, endLng }
+    };
+  } catch (err) {
+    console.error('createTrip Error:', err);
+    return { success: false, message: 'ไม่สามารถสร้างทริปได้' };
+  }
+};
+
+// เพิ่มจุดแวะให้ทริป
+export const addTripStops = async (id_trip, stops = []) => {
+  if (!id_trip || !Array.isArray(stops) || stops.length === 0) {
+    return { success: false, message: 'ข้อมูลจุดแวะไม่ถูกต้อง' };
+  }
+
+  const conn = await DB.getConnection();
+
+  try {
+    await conn.beginTransaction();
+
+    for (let i = 0; i < stops.length; i++) {
+      const stop = stops[i];
+      const id_stop = uuidv4();
+      const stop_order = i + 1;
+
+      const place_id_place = stop.place_id_place || null;
+      const custom_name   = stop.custom_name || null;
+      const custom_lat    = stop.custom_lat ?? null;
+      const custom_lng    = stop.custom_lng ?? null;
+      const stay_minutes  = stop.stay_minutes ?? 0;
+
+      await conn.query(
+        `INSERT INTO trip_stop 
+          (id_stop, id_trip, place_id_place, custom_name, custom_lat, custom_lng, stop_order, stay_minutes)
+         VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
+        [id_stop, id_trip, place_id_place, custom_name, custom_lat, custom_lng, stop_order, stay_minutes]
+      );
+    }
+
+    await conn.commit();
+    return { success: true, message: 'เพิ่มจุดแวะสำเร็จ' };
+  } catch (err) {
+    await conn.rollback();
+    console.error('addTripStops Error:', err);
+    return { success: false, message: 'ไม่สามารถเพิ่มจุดแวะได้' };
+  } finally {
+    conn.release();
+  }
+};
+
+// ดึงทริป + จุดแวะทั้งหมด
+export const getTripWithStops = async (id_trip) => {
+  try {
+    const [tripRows] = await DB.execute(
+      `SELECT * FROM trip WHERE id_trip = ? LIMIT 1`,
+      [id_trip]
+    );
+
+    if (tripRows.length === 0) {
+      return { success: false, message: 'ไม่พบทริปนี้' };
+    }
+
+    const trip = tripRows[0];
+
+    const [stopRows] = await DB.execute(
+      `SELECT ts.*, p.name AS place_name
+       FROM trip_stop ts
+       LEFT JOIN place p ON ts.place_id_place = p.id_place
+       WHERE ts.id_trip = ?
+       ORDER BY ts.stop_order ASC`,
+      [id_trip]
+    );
+
+    return {
+      success: true,
+      trip: {
+        ...trip,
+        stops: stopRows
+      }
+    };
+  } catch (err) {
+    console.error('getTripWithStops Error:', err);
+    return { success: false, message: 'ไม่สามารถดึงข้อมูลทริปได้' };
+  }
+};
+
+
 
 
 export default DB;
